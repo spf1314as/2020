@@ -1,0 +1,37 @@
+[ 
+    {},
+    {[Function: require]
+      resolve: { [Function: resolve] paths: [Function: paths] },
+      main: 
+       Module {
+         id: '.',
+         exports: {},
+         parent: null,
+         filename: '/Users/didi/code/my-code/2020/js/es6/array-function.js',
+         loaded: false,
+         children: [],
+         paths: [Array] },
+      extensions: { '.js': [Function], '.json': [Function], '.node': [Function] },
+      cache: 
+       { '/Users/didi/code/my-code/2020/js/es6/array-function.js': [Object] } 
+    },
+    Module {
+      id: '.',
+      exports: {},
+      parent: null,
+      filename: '/Users/didi/code/my-code/2020/js/es6/array-function.js',
+      loaded: false,
+      children: [],
+      paths: 
+       [ '/Users/didi/code/my-code/2020/js/es6/node_modules',
+         '/Users/didi/code/my-code/2020/js/node_modules',
+         '/Users/didi/code/my-code/2020/node_modules',
+         '/Users/didi/code/my-code/node_modules',
+         '/Users/didi/code/node_modules',
+         '/Users/didi/node_modules',
+         '/Users/node_modules',
+         '/node_modules' ] 
+    },
+    '/Users/didi/code/my-code/2020/js/es6/array-function.js',
+    '/Users/didi/code/my-code/2020/js/es6' 
+]

@@ -1,0 +1,17 @@
+// BEM
+.conent {
+    &_name{
+        font: {
+            size: 18px;
+        }
+    }
+    &_value{
+        text-align: center;
+        &--active{
+            color: red;
+        }
+        &--followed{
+            color: blue($color: #000000);
+        }
+    }
+}
