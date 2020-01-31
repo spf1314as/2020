@@ -5,7 +5,7 @@ start
     2. `✔️` 你所不知道的javascript  esm
     3. `✔️` webpack 
         - hard-source-webpack-plugin原理 `package.lock.json yarn.lock.json package.json node_modules/package.json md5求hash`
-    4. select n from m
+    4.`✔️` select n from m
     5. 手写router
 
 - 01-30
