@@ -13,7 +13,7 @@
 7. class 继承同 es5的区别
 8. async/promise `done`
     - 错误处理 同步错误处理异步错误 `done`
-    - promise实现
+    - promise实现 `done`
     - 异同 `done`
         - 同
             - 异步
