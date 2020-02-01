@@ -9,7 +9,7 @@ start
     5. 手写router
 
 - 01-30
-    1. 防抖节流
+    1. `✔️` 防抖、节流
     2. 三栏、两栏布局
     3. setInterval、setTimeout 利弊 为什么，为什么用后者模拟前者
 

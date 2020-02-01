@@ -1,5 +1,5 @@
 1. fetch 和ajax的区别
-2. url 到页面显示的过程
+2. 输入url到页面显示的过程
 3. 三次握手 四次断开
     - tcp/ip 协议
     - http https
