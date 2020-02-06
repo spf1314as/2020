@@ -3,4 +3,3 @@
 3. 观察者模式
 4. worker serverWorker、share worker区别
 5. cookie storage （session storage 的特点）
-6. 

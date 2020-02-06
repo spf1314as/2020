@@ -1,6 +1,6 @@
-1. fetch 和ajax的区别
+1. fetch和ajax的区别
 2. 输入url到页面显示的过程
-3. 三次握手 四次断开
+3. 三次握手、四次断开
     - tcp/ip 协议
     - http https
     - 常见状态码
@@ -13,7 +13,7 @@
     - dns-connect preload prefetch
     - webpack 分包 缓存组
     - cdn
-6. 页面性能监控
+6. `✔️` 页面性能监控
 7. 回流和重绘
 8. csp
 9. xss csrf
