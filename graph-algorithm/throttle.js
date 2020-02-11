@@ -5,46 +5,41 @@
  */
 function throttle(fn, dely) {
     let timer = null
-    let time = ''
-    let counter = 0
-    return function callback() {
+    let fireTime = 0
+    return function cb() {
+        let self = this
+        let args = [...arguments]
+        let cur = Date.now()
+        clearTimeout(timer)
+        isEvalute()
+        function isEvalute () {
+            if (cur - fireTime >= dely) {
+                evalute()
+            } else {
+               timer = setTimeout(function () {
+                    isEvalute()
+                }, dely + fireTime - cur)
+            } 
+        }
+        function evalute () {
+            fn.apply(self, args)
+            fireTime = Date.now()
+            timer && clearTimeout(timer)
+            timer = null
+        }
 
         
-        if (time) {
-            counter++
-            setTimeout(() => {
-                fn.apply(this, [].slice.call(arguments))
-            },counter * dely)
-        } else {
-            time = Date.now()
-            fn.apply(this, [].slice.call(arguments))
-            timer = setInterval(() => {
-                if (counter <=0) {
-                    time = 0
-                    clearInterval(timer)
-                } else {
-                    fn.apply(this, [].slice.call(arguments))
-                    counter--
-                }
-            }, dely); 
-        }   
-
     }
-
 }
 
-let argsList = []
-function wrapper() {
-    return function reFn() {
-        argsList.push([].slice.call(arguments))
-        
-    }
-    
+function test () {
+    console.log(Date.now())
 }
-
-let fn = wrapper()
-
-fn(22)
-fn(444)
-console.log(argsList)
+let i = 0
+let deTest = throttle(test, 2 * 1000)
+let timer = setInterval(() => {
+    deTest()
+    i++
+    if (i >= 10) clearInterval(timer)
+}, 1 * 1000);
 

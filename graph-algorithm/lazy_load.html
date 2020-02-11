@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* *{
+            padding: 0;
+            margin: 0;
+        } */
+        .wrapper{
+            height: 500px;
+            background: burlywood;
+            overflow: scroll;
+        }
+        .child{
+            height: 1000px;
+            width: 110%;
+        }
+        .lazy{
+            width: 120%;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="wrapper">
+            <div class="child">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quasi modi dolor voluptas. Sed ratione doloremque minus provident, repellendus architecto officiis molestias laudantium, sit atque, suscipit placeat ea explicabo vero?
+            </div>
+        </div>
+        <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae vero voluptatum iste quisquam accusamus molestias? Tempora quibusdam ratione vitae aliquid? Deserunt, quo inventore ducimus unde similique veniam explicabo maiores vitae.
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nam ipsa excepturi omnis, nisi nemo suscipit cumque quas veritatis voluptate pariatur rerum earum labore nihil consequuntur iste accusamus aut unde?
+            </span>
+        </div>
+        <div class="lazy">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum saepe doloremque aut rerum. Consequuntur sapiente unde aspernatur eveniet qui perspiciatis maiores reprehenderit, excepturi quaerat eius, numquam soluta, fugit distinctio recusandae.
+
+        </div>
+    </div>
+    <script src="./lazy.js">
+    </script>
+    <script>
+        function getScrollbarWidth() {
+            var odiv = document.createElement('div'),//创建一个div
+                styles = {
+                    width: '100px',
+                    height: '100px',
+                    overflowY: 'scroll'//让他有滚动条
+                }, i, scrollbarWidth;
+            for (i in styles) odiv.style[i] = styles[i];
+            document.body.appendChild(odiv);//把div添加到body中
+            scrollbarWidth = odiv.offsetWidth - odiv.clientWidth;//相减
+            odiv.remove();//移除创建的div
+            return scrollbarWidth;//返回滚动条宽度
+        }
+        console.log(getScrollbarWidth())
+    </script>
+    
+</body>
+</html>

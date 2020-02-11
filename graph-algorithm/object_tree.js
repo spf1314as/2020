@@ -25,7 +25,6 @@ function getData(data,str){
     function isObject (params) {
         return !!params && typeof params === 'object'
     }
-
     function recursion(obj, keys) {
         
         for (let key in obj) {

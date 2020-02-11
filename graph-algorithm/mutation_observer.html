@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'target'>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio debitis assumenda autem doloribus tenetur similique tempore quae voluptatibus animi ipsam quibusdam, suscipit odio. Cum suscipit repudiandae blanditiis id velit tempora!
+
+    </div>
+    <button id="btn">change color</button>
+    <script>
+        let body = new MutationObserver(function () {
+            console.dir(...arguments)
+        })
+        body.observe(document.body, {
+            childList: true,
+            subtree: true,
+            attributes: true
+        })
+        btn.onclick = function(e) {
+            target.style.color = 'red'
+        }
+        
+    </script>
+</body>
+</html>

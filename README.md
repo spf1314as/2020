@@ -24,5 +24,3 @@ start
 - todo
     - vue router api
     - vue 知识点
-
-
