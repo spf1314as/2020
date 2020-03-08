@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container:after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+        .left{
+            background: burlywood;
+            width: 200px;
+            float: left; /* one two */
+            position: absolute;  /*three*/
+        }
+        .right{
+            margin-left: 200px; /*one three*/
+            background: beige;
+            overflow: auto;  /* two  */
+            
+
+
+        }
+        .relative{ /* three */
+            position: relative;
+        }
+        /* .container{ four
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+        }
+        .left{
+            flex: none;
+        }
+        .right{
+            flex: auto;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur fugiat rem eligendi mollitia incidunt recusandae aperiam ea unde natus omnis porro corporis voluptate ipsam, quas voluptatum culpa non aliquid nihil!
+        </div>
+        <div class="right">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur doloremque animi nihil magnam unde accusantium, dignissimos laborum libero a obcaecati atque at quidem voluptatum. Facilis officiis facere magni fugit quibusdam.
+        </div>
+
+    </div>
+    
+</body>
+</html>

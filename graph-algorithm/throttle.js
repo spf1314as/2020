@@ -6,10 +6,15 @@
 function throttle(fn, dely) {
     let timer = null
     let fireTime = 0
+    let firstFire = false
     return function cb() {
         let self = this
         let args = [...arguments]
         let cur = Date.now()
+        if (!firstFire) {
+            firstFire = true
+            fireTime = Date.now()
+        }
         clearTimeout(timer)
         isEvalute()
         function isEvalute () {

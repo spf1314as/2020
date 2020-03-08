@@ -14,7 +14,7 @@
     - 页面内按需加载组件
 3. 拆分代码，拆分成多个小文件
 4. link标签
-    - preload、prefetch 预加载资源 `<link rel="preload" as="script" href="foo.js">`
+    - preload、prefetch 预加载资源 `<link rel="preload" as="script" href="foo.js">  `
     - dns-prefetch 预先进行dns解析
     - preconnect 预先建立资源请求连接 crossorigin="anonymous/use-credentials"
 5. defer,async 关键的资源延时或异步加载，不阻碍页面的正常渲染
@@ -29,7 +29,7 @@
             - 支持canvas时
             ```javascript
                 let cas = doucment.createElement('canvas')
-                cas.toDataURL('image/webp') => image/webp
+                cas.toDataURL('image/webp') => image/webp // 默认为image/png
             ```
 
     - 图片压缩

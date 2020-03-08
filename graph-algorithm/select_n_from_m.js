@@ -32,3 +32,35 @@ function pickNFromM(list, n) {
 }
 
 console.log(pickNFromM(list, 3))
+console.log(pickNFromM1(list, 3))
+
+function pickNFromM1 (list, n) {
+    let result = []
+    function slice(arr, i, bef = true) {
+        let before = arr.slice(0, i)
+        let after = arr.slice(i+1)
+        return bef ? [...before, ...after] : after
+    }
+    for (let [index, item] of list.entries()) {
+        let cell = []
+        cell.push(item)
+        recursion(slice(list, index, false), cell)
+    }
+
+    function recursion(arr, cell) {
+        for (let [j, item] of arr.entries()) {
+            let newCell = cell.slice() 
+            newCell.push(item)  
+            if (newCell.length >= n) {
+                result.push(newCell)
+            } else {
+                recursion(slice(arr, j, false), newCell)
+            }
+        }
+    }
+
+    return {
+        result: result,
+        len: result.length
+    }
+}

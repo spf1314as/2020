@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .left{
+            background: beige;
+            width: 200px;
+        }
+        .right{
+            background-color: gold;
+            width: 200px;
+        }
+        .center{
+            background: gray;
+        }
+        /* .container{
+            display: flex;
+            justify-content: normal;
+            align-items: flex-start;
+        }
+        .left{
+            flex: none;
+            width: 200px;
+
+        }
+        .right{
+            flex: none;
+            width: 300px;
+        } */
+        .left{
+            float: left;
+            margin-left: -100%;
+            /* display: inline-block; */
+        }
+        .right{
+            float: left;
+            margin-left: -200px;
+            /* display: inline-block; */
+
+        }
+        .center{
+            padding: 0 200px;
+            /* display: inline-block; */
+
+            float: left;
+            /* overflow: hidden; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="center">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem porro possimus illum earum quam repudiandae voluptatibus ipsam ea laboriosam debitis voluptates atque, itaque aliquam, iusto enim reiciendis, quo incidunt vitae.
+            </div>
+        </div>
+        <div class="left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, natus suscipit! Vel, eum inventore? Ullam adipisci molestiae, magni cupiditate laboriosam, assumenda dolor saepe, nobis harum expedita eos omnis fugiat blanditiis.
+        </div>
+        <div class="right">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus debitis reprehenderit tempora eos cumque suscipit dolor, assumenda eligendi pariatur doloremque magnam quisquam optio alias saepe tempore consequuntur, ipsa facilis repellat?
+        </div>
+    </div>
+</body>
+</html>
