@@ -1,0 +1,26 @@
+@import "../css/2.min.css";
+.px2 {
+  font-size: 2px;
+}
+.name {
+  font-size: 10px;
+  color: red;
+  clear: both;
+  content: '';
+  display: block;
+}
+.clear,
+.container {
+  clear: both;
+  content: '';
+  display: block;
+}
+.container {
+  color: #f90000;
+}
+.my-hover-mixin:hover {
+  border: 1px solid red;
+}
+button:hover {
+  border: 1px solid red;
+}

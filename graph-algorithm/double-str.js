@@ -7,6 +7,7 @@ for (let i =0 ; i <len-1; i++) {
         let temp = str.slice(i, lastIndex+1)
         if (temp === temp.split("").reverse().join("")){
             result.push(temp)
+            i = lastIndex
         }
     }
 }

@@ -30,6 +30,8 @@
     - float: left right
     - clear
     - 清除浮动的方法、为什么
+        - 非浮动块
+        - 浮动元素
 
 11. `✅`BFC
 12. `✅` BEM block-name__element-name--modifier-name

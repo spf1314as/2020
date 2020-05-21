@@ -58,7 +58,7 @@
         get
     })
     ```
-    - 数组类型的属性，劫持push、splice、pop、shift、unshift改变数组的方法,直接调用notify方法,通知依赖更新
+    - 数组类型的属性，劫持push、splice、pop、shift、unshift改变数组的方法,直接调用notify方法,通知依赖更新（继承Array.prototype，再重写要劫持的方法，在进行响应式转化时，对获取到的数组形式数据进行，原型修改，对定义好的数组形式的数据进行原型修改）
     - 依赖收集，赋值时调用依赖收集中的所有watch实例，各个实例进行对比判断是否需要更新
     - 渲染模板上使用过的属性，会被依赖收集，如果这些属性发生变化，渲染函数进行重新求值
 - 数组响应式实现
@@ -70,7 +70,7 @@
     - 底层实现上没有区别，都是与组件选项进行参数合并
     - 生命周期hook会在组件之前执行
     - 属性、函数、data会被组件中的同名覆盖，已组件为准
-    - 先合并extends、后合并mixins
+    - 先合并extends、后合并mixins，mixins的优先级要高一些
 - extend
     - 存在继承关系
     - 默认调用extend的情况 ?
@@ -103,13 +103,18 @@
 - filter、method区别
     - filter 没有this的绑定，就是单纯的处理函数，函数自身与组件没有关系。使用时`variable | filter(second, third)`
     - method 绑定this，实例的方法
+
 - scoped
 - pug
     - 写法简洁、省略部分标签元素 
 - 属性引用类型和data为什么要用函数
     - 如果不用函数调用，直接使用引用类型，会造成单例模式，相同组件的多个实例共享同一个属性或data,导致状态混乱
+- props 
+    - type: 可以自定义构造函数 instanceof 判断是否是实例
+    - required: boolean
+    - default: func 或是 基本类型的值
+    - validator: 自定义校验规则
 
---- 
 ### vue-router
 
 1. 原理是什么
@@ -137,7 +142,7 @@
     - abstract 服务端渲染
 2. base
     - base 默认为 /
-    - 地址栏上显示的地址pathname为`` base + fullpath``(vue-router 根据单个路由配置解析处理的pathname + search + hash)
+    - 地址栏上显示的地址pathname为`` base + fullpath``(fullpath vue-router根据单个路由配置解析处理的pathname + search + hash)
 3. hash模式和history模式的区别是什么
     - 支持history api时 底层处理是一样
     - url显示的页面地址不同
@@ -148,7 +153,7 @@
 5. 判断是不是同一个路由的标准
     - path 
     - params
-    - 如果是同一个路由时，路由组件会复用，不会重新new 实例
+    - 如果是同一个路由时，路由组件会复用，不会重新new实例
     - 同一路由组件复用时执行下面的导航守卫
         - beforeEach
         - beforeRouteUpdate

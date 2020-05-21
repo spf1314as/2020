@@ -35,4 +35,5 @@
         - 最小授权原则
         - 不会产生闭包
     - amd/cmd/umd
+    - 使用script标签进行加载时，type=module， 默认不带有cookie 凭证
 9. proxy reflect

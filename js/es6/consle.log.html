@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       'use strict';
+       console.log(this)
+        var b = 1
+        var c = 11
+        var a = function () {
+
+            console.log(this)
+            console.log(this.b)
+            console.log(b)
+            console.log(this.c)
+            // console.log(c)
+            var b = 222
+            let c = 1111
+            return () => {
+                console.log(this.b) // 1
+                console.log(b) // 222
+                console.log(this.c) // 11
+                console.log(c) // 1111
+            }
+        }
+        var d = a()
+        d()
+
+
+    </script>
+    
+</body>
+</html>

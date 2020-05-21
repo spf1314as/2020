@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .flex{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 1000px;
+        }
+        /* 
+        
+            500 - 100 -700 = 300
+            one 300/6   100 - 150 
+            two 100  300 - 
+            three 50
+            300 + 600 + 400 = 1300
+            
+         */
+         /* 
+            100 - 300 * 100 *3 /1300 = 
+          */
+        .one{ 
+            flex-grow: 2;
+            flex-basis: auto;
+            width: 100px;
+            background-color: beige;
+        }                           
+        .two{
+            flex-grow: 5;
+            flex-basis: auto;
+            width: 300px;
+            background-color: blanchedalmond;
+        }
+        .three{
+            flex-grow: 3;
+            flex-basis: auto;
+            background: brown;
+            width: 400px;
+        }
+        div{
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="one">
+        </div>
+        <div class="two">
+        </div>
+        <div class="three">
+        </div>
+    </div>
+
+</body>
+</html>

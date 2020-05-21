@@ -1,3 +1,10 @@
+@function grid-width ($size) {
+    @if(iscolor($size)) {
+        @return $size
+    }    
+    @return $size
+}
+
 // BEM
 .conent {
     &_name{
@@ -12,6 +19,8 @@
         }
         &--followed{
             color: blue($color: #000000);
+            font-size: grid-width(5);
         }
     }
 }
+

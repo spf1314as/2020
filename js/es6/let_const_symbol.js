@@ -15,7 +15,7 @@ const bb = {}
  * 2. symbol.iterator
  * 3. symbol.for
  * 4. symbol.hasInstance
- * 5. symbol.toStringTag
+ * 5. symbol.                  
  */
 
 

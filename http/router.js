@@ -26,7 +26,7 @@ function parse(path) {
                 return item
             }
         })
-        let replacedStr = '^' + replacedList.join('\/') + '$'
+        let replacedStr = '^' + replacedList.join('\/') + '$' // \/path\/\\w+\/\\w+
         result.regexp = new RegExp(replacedStr, 'i')
         return result
     }  

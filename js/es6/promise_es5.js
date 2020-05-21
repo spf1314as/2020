@@ -42,9 +42,9 @@ function CustomPromise (fn) {
     function reject (error) {
         status = 'reject'
         value = error
-        execute(data)
+        execute()
     }
-    function execute (data) {
+    function execute () {
         setTimeout(function () {
             for (let cb of callBacks) {
                 handle(cb)

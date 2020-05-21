@@ -14,7 +14,6 @@ const p = Promise.resolve();
 
  // 3 eng 1  4 5 2 undefined 11
 
-
 function Go(a) {
     this.a = a;
    var a = 6;

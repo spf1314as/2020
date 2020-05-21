@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa perferendis distinctio minus modi tempora nemo sint exercitationem, iusto et aliquid corrupti. Quisquam distinctio adipisci officia fuga quas animi et necessitatibus?
+    </div>
+    <button id="btn">
+        setcookie
+    </button>
+    <iframe src="http://192.168.1.5:5000/iframe.html" frameborder="0"></iframe>
+    <script>
+
+        btn.onclick = function() {
+            localStorage.setItem(1, Date.now())
+            document.cookie = "name=didi"
+        }
+
+    </script>
+</body>
+</html>

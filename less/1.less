@@ -1,0 +1,29 @@
+@import "../css/2.min.css";
+@import './2.less';
+@color: red;
+.name{
+    font-size: 10px;
+    color: @color;
+    .clear();
+}
+.clear{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.container{
+    color: @color2;
+    &:extend(.clear);
+}
+.background () {
+
+}
+.my-hover-mixin{
+    &:hover {
+      border: 1px solid red;
+    }
+}
+button {
+    .my-hover-mixin;
+}

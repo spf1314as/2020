@@ -1,0 +1,17 @@
+.conent_name {
+  font-size: 18px;
+}
+
+.conent_value {
+  text-align: center;
+}
+
+.conent_value--active {
+  color: red;
+}
+
+.conent_value--followed {
+  color: 0;
+  font-size: 5;
+}
+/*# sourceMappingURL=1.css.map */

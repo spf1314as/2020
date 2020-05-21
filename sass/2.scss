@@ -1,0 +1,106 @@
+
+$color: red;
+
+
+
+@for $index from 1 to 4 {
+    .icon_#{$index} {
+        position: relative;
+        top: $index * 13px;
+        left: 0;
+    }
+}
+
+@each $index in  10 20 30 40 {
+    @if ($index == 10) {
+        .mr_#{$index} {
+            margin-right: $index * 2px;
+        }
+    }
+    @if ($index == 20) {
+        .mr_#{$index} {
+            margin-right: $index * 3px;
+        }
+    } @else {
+        .mr_#{$index} {
+            margin-right: $index * 1px;
+        }
+    }
+}
+
+@mixin no-bullets {
+    list-style: none;
+    li {
+      list-style-image: none;
+      list-style-type: none;
+      margin-left: 0px;
+    }
+  }
+
+  @mixin generateBackground ($url: './game.png') {
+      background-image: url($url) center ;
+      background-size: 100% auto;
+  
+  }
+
+  @function px2rem($size){
+    $px: unit($size);
+    @if($px == 'px'){
+        @return $size / 16px * 1rem;
+        
+    } @else if ($px == 'rem') {
+        @return $size;
+    } @else if (unitless($size)){
+        @return $size * 1rem;
+    }
+
+
+  }
+  $end: 5;
+  @while $end > 0 {
+      .while_#{$end}{
+        font-size: px2rem($end * 2);
+      }
+      $end: $end - 1;
+      
+  }
+
+  %clear{
+    &:after{
+        clear: both;
+        content: '';
+        display: block;
+    }
+}
+.icon {
+    font: {
+        size: 10px;
+        weight: 300;
+    };
+    @include no-bullets;
+    @include generateBackground('../icon.png');
+
+}
+
+.container {
+    color: $color;
+    font-size: px2rem(24px);
+    background-size: percentage(20/200) percentage(19/300);
+    &_info{
+        @extend %clear;
+        @extend .nickName;
+        @at-root .webp-root & {
+            @include generateBackground();
+        }
+    }
+    
+}
+
+.nickName{
+    font-size:px2rem(2rem);
+    @include generateBackground();
+    &:hover{
+       color: lighten($color, 5%);
+       font-size: px2rem(1);
+    }
+}
