@@ -15,3 +15,7 @@
 
  let path = "/././path/name"
  console.log(resolve('/base/', path))
+
+
+
+ //  ... 

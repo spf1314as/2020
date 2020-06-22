@@ -57,3 +57,77 @@ function a (fn) {
 
 
 }
+
+
+function PromiseDemo(fn) {
+    let val = ''
+    let status = 'pendding'
+    let cbs = []
+
+    this.then = function (onFullilled, onRejected) {
+        return new PromiseDemo(function(resolve, reject) {
+            handle({
+                onFullilled,
+                onRejected,
+                resolve,
+                reject
+            })
+        })
+
+
+    function handle(params) {
+        if (status === 'pendding') {
+            cbs.push(params)
+            return
+        }
+
+        let cb = status === 'fullfilled' ? params.onFullilled : params.onRejected;
+        if(cb === null) {
+            cb = status === 'fullfilled' ? params.resolve : params.reject
+            cb(value)
+        }
+        try{
+            let ret = cb(value)
+            params.resolve(ret)
+        } catch(error) {
+            params.reject(error)
+        }
+    
+
+
+
+
+    }
+    function resolve (data) {
+        let then = data.then
+        if (then && typeof then === 'function') {
+            return then.call(data, resolve, reject)
+        }
+        value = data
+        status = 'fullfilled'
+        execute()
+        
+    }
+    function reject(data) {
+        value = data
+        satus = 'reject'
+        execute()
+
+    }
+
+    function execute() {
+       setTimeout(() => {
+            cbs.forEach(cb => {
+                handle(cb)
+            })
+       }, 0);
+
+    }
+    
+
+
+
+
+
+
+}
